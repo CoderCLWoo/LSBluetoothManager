@@ -15,6 +15,8 @@
 		65E62DA31DC08DE900312F18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65E62DA11DC08DE900312F18 /* LaunchScreen.storyboard */; };
 		65E62DAE1DC08DE900312F18 /* DSGBLEManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62DAD1DC08DE900312F18 /* DSGBLEManagerTests.m */; };
 		65E62DB91DC08DE900312F18 /* DSGBLEManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62DB81DC08DE900312F18 /* DSGBLEManagerUITests.m */; };
+		65E62DCC1DC0923D00312F18 /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62DC81DC0923D00312F18 /* BLE.m */; };
+		65E62DCD1DC0923D00312F18 /* LSBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62DCB1DC0923D00312F18 /* LSBLEManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,11 @@
 		65E62DB41DC08DE900312F18 /* DSGBLEManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSGBLEManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E62DB81DC08DE900312F18 /* DSGBLEManagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSGBLEManagerUITests.m; sourceTree = "<group>"; };
 		65E62DBA1DC08DE900312F18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E62DC71DC0923D00312F18 /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLE.h; path = DSGBluetoothManager/BLE.h; sourceTree = "<group>"; };
+		65E62DC81DC0923D00312F18 /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BLE.m; path = DSGBluetoothManager/BLE.m; sourceTree = "<group>"; };
+		65E62DC91DC0923D00312F18 /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BLEDefines.h; path = DSGBluetoothManager/BLEDefines.h; sourceTree = "<group>"; };
+		65E62DCA1DC0923D00312F18 /* LSBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSBLEManager.h; path = DSGBluetoothManager/LSBLEManager.h; sourceTree = "<group>"; };
+		65E62DCB1DC0923D00312F18 /* LSBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSBLEManager.m; path = DSGBluetoothManager/LSBLEManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +88,7 @@
 		65E62D871DC08DE800312F18 = {
 			isa = PBXGroup;
 			children = (
+				65E62DC61DC0921700312F18 /* DSGbluetoothManager */,
 				65E62D921DC08DE800312F18 /* DSGBLEManager */,
 				65E62DAC1DC08DE900312F18 /* DSGBLEManagerTests */,
 				65E62DB71DC08DE900312F18 /* DSGBLEManagerUITests */,
@@ -105,10 +113,6 @@
 				65E62D971DC08DE800312F18 /* AppDelegate.m */,
 				65E62D991DC08DE800312F18 /* ViewController.h */,
 				65E62D9A1DC08DE800312F18 /* ViewController.m */,
-				65E62D9C1DC08DE900312F18 /* Main.storyboard */,
-				65E62D9F1DC08DE900312F18 /* Assets.xcassets */,
-				65E62DA11DC08DE900312F18 /* LaunchScreen.storyboard */,
-				65E62DA41DC08DE900312F18 /* Info.plist */,
 				65E62D931DC08DE800312F18 /* Supporting Files */,
 			);
 			path = DSGBLEManager;
@@ -117,6 +121,10 @@
 		65E62D931DC08DE800312F18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65E62D9C1DC08DE900312F18 /* Main.storyboard */,
+				65E62D9F1DC08DE900312F18 /* Assets.xcassets */,
+				65E62DA11DC08DE900312F18 /* LaunchScreen.storyboard */,
+				65E62DA41DC08DE900312F18 /* Info.plist */,
 				65E62D941DC08DE800312F18 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +146,18 @@
 				65E62DBA1DC08DE900312F18 /* Info.plist */,
 			);
 			path = DSGBLEManagerUITests;
+			sourceTree = "<group>";
+		};
+		65E62DC61DC0921700312F18 /* DSGbluetoothManager */ = {
+			isa = PBXGroup;
+			children = (
+				65E62DC71DC0923D00312F18 /* BLE.h */,
+				65E62DC81DC0923D00312F18 /* BLE.m */,
+				65E62DC91DC0923D00312F18 /* BLEDefines.h */,
+				65E62DCA1DC0923D00312F18 /* LSBLEManager.h */,
+				65E62DCB1DC0923D00312F18 /* LSBLEManager.m */,
+			);
+			name = DSGbluetoothManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +296,8 @@
 				65E62D9B1DC08DE800312F18 /* ViewController.m in Sources */,
 				65E62D981DC08DE800312F18 /* AppDelegate.m in Sources */,
 				65E62D951DC08DE800312F18 /* main.m in Sources */,
+				65E62DCC1DC0923D00312F18 /* BLE.m in Sources */,
+				65E62DCD1DC0923D00312F18 /* LSBLEManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,9 +437,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DSGBLEManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MZJ.DSGBLEManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -426,9 +450,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DSGBLEManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.MZJ.DSGBLEManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
