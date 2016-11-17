@@ -1,6 +1,6 @@
 //
 //  LSBLEManager.h
-//  TenCount
+
 //
 //  Created by 刘爽 on 16/10/15.
 //  Copyright © 2016年 redbear. All rights reserved.
