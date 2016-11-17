@@ -20,10 +20,11 @@
 
 @protocol BLEDelegate
 @optional
--(void) bleDidConnect;
--(void) bleDidDisconnect;
--(void) bleDidUpdateRSSI:(NSNumber *) rssi;
--(void) bleDidReceiveData:(unsigned char *) data length:(int) length;
+- (void)bleDidConnect;
+- (void)bleDidDisconnect;
+- (void)bleDidUpdateRSSI:(NSNumber *) rssi;
+- (void)bleDidReceiveData:(unsigned char *) data length:(int) length;
+- (void)bleDidDiscovered:(NSArray *)peripherals;
 @required
 @end
 

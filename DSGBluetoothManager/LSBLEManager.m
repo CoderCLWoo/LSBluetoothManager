@@ -14,6 +14,8 @@
 }
 
 @property (nonatomic, assign) NSTimeInterval timeOut;
+@property (nonatomic, strong) BLE *BLE;
+@property (nonatomic, copy) LSBLEManagerBlock responseBlock;
 @end
 static id returnAlloc;
 
@@ -34,12 +36,14 @@ static id returnAlloc;
 }
 
 - (instancetype)init{
-    
-    self = [super init];
     if (self) {
-        self.device = [[BLE alloc]init];
-        [self.device controlSetup];
-        self.device.delegate = self;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            self.BLE = [[BLE alloc]init];
+            [self.BLE controlSetup];
+            self.BLE.delegate = self;
+            self.centralManager = self.BLE.CM;
+        });
     }
     return self;
 }
@@ -48,10 +52,33 @@ static id returnAlloc;
     self.timeOut = time;
 }
 
-- (void)discoverPeripherals{
-    [self.device findBLEPeripherals:self.timeOut ? self.timeOut : 5];
+- (BOOL)isLSBLEManagerConnected{
+    return self.BLE.isConnected;
 }
 
+- (void)discoverPeripherals{
+    [self.BLE findBLEPeripherals:self.timeOut ? self.timeOut : 5];
+}
+
+- (void)connect2Peripheral:(CBPeripheral *)peripheral{
+
+    [self.BLE connectPeripheral:peripheral];
+    self.connectedPeripheral = self.BLE.activePeripheral;
+}
+
+- (void)disConnectPeripheral{
+    [self.BLE.CM cancelPeripheralConnection:self.BLE.activePeripheral];
+}
+
+- (void)send:(NSData *)data response:(LSBLEManagerBlock)response{
+    [self.BLE write:data];
+    self.responseBlock = response;
+}
+
+- (void)send:(NSData *)data{
+    [self.BLE write:data];
+}
+#pragma BLE -- delegate
 - (void)bleDidConnect{
     
     if ([self.deleagte respondsToSelector:@selector(LSBLEManagerDeviceDidConnected)]) {
@@ -66,15 +93,24 @@ static id returnAlloc;
 }
 - (void)bleDidReceiveData:(unsigned char *)data length:(int)length{
     
-    if ([self.deleagte respondsToSelector:@selector(LSBLEManagerDeviceDidReceiveData:length:)]) {
-        [self.deleagte LSBLEManagerDeviceDidReceiveData:data length:length];
+    
+    if (self.responseBlock) {
+        __weak LSBLEManager *weakSelf = self;
+        weakSelf.responseBlock(data,length);
+        weakSelf.responseBlock = nil;
+    }else{
+        if ([self.deleagte respondsToSelector:@selector(LSBLEManagerDeviceDidReceiveData:length:)]) {
+            [self.deleagte LSBLEManagerDeviceDidReceiveData:data length:length];
+        }
     }
 }
 
-- (BOOL)isLSBLEManagerConnected{
-    return self.device.isConnected;
-}
-- (NSArray *)LSBLEManagerFoundPeripheralArray{
-    return self.device.peripherals;
+
+
+- (void)bleDidDiscovered:(NSArray *)peripherals{
+    if ([self.deleagte respondsToSelector:@selector(LSBLEManagerDeviceDidDiscovered:)]) {
+        [self.deleagte LSBLEManagerDeviceDidDiscovered:peripherals];
+    }
+    
 }
 @end

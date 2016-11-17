@@ -88,7 +88,7 @@
 		65E62D871DC08DE800312F18 = {
 			isa = PBXGroup;
 			children = (
-				65E62DC61DC0921700312F18 /* DSGbluetoothManager */,
+				65E62DC61DC0921700312F18 /* LSBLEManager */,
 				65E62D921DC08DE800312F18 /* DSGBLEManager */,
 				65E62DAC1DC08DE900312F18 /* DSGBLEManagerTests */,
 				65E62DB71DC08DE900312F18 /* DSGBLEManagerUITests */,
@@ -148,7 +148,7 @@
 			path = DSGBLEManagerUITests;
 			sourceTree = "<group>";
 		};
-		65E62DC61DC0921700312F18 /* DSGbluetoothManager */ = {
+		65E62DC61DC0921700312F18 /* LSBLEManager */ = {
 			isa = PBXGroup;
 			children = (
 				65E62DC71DC0923D00312F18 /* BLE.h */,
@@ -157,7 +157,7 @@
 				65E62DCA1DC0923D00312F18 /* LSBLEManager.h */,
 				65E62DCB1DC0923D00312F18 /* LSBLEManager.m */,
 			);
-			name = DSGbluetoothManager;
+			name = LSBLEManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,7 +439,7 @@
 				INFOPLIST_FILE = DSGBLEManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MZJ.DSGBLEManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WSDSG.Test2DjangoServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,7 +452,7 @@
 				INFOPLIST_FILE = DSGBLEManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MZJ.DSGBLEManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WSDSG.Test2DjangoServer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,6 +525,7 @@
 				65E62DBF1DC08DE900312F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65E62DC01DC08DE900312F18 /* Build configuration list for PBXNativeTarget "DSGBLEManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +534,7 @@
 				65E62DC21DC08DE900312F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65E62DC31DC08DE900312F18 /* Build configuration list for PBXNativeTarget "DSGBLEManagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -541,6 +543,7 @@
 				65E62DC51DC08DE900312F18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

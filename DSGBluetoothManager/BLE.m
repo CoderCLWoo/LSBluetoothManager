@@ -247,6 +247,7 @@ static int rssi = 0;
     [self.CM stopScan];
     NSLog(@"Stopped Scanning");
     NSLog(@"Known peripherals : %lu", (unsigned long)[self.peripherals count]);
+    [self.delegate bleDidDiscovered:self.peripherals];
     [self printKnownPeripherals];
 }
 
