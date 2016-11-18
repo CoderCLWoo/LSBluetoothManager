@@ -58,6 +58,7 @@ static id returnAlloc;
 
 - (void)discoverPeripherals{
     [self.BLE findBLEPeripherals:self.timeOut ? self.timeOut : 5];
+    [self.BLE.peripherals removeAllObjects];
 }
 
 - (void)connect2Peripheral:(CBPeripheral *)peripheral{
@@ -110,6 +111,7 @@ static id returnAlloc;
 - (void)bleDidDiscovered:(NSArray *)peripherals{
     if ([self.deleagte respondsToSelector:@selector(LSBLEManagerDeviceDidDiscovered:)]) {
         [self.deleagte LSBLEManagerDeviceDidDiscovered:peripherals];
+        self.peripherals = peripherals;
     }
     
 }

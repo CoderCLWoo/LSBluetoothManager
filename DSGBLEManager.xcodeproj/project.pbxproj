@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65A64FA21DDF1B98004FFF6C /* LSAnimationButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64F9F1DDF1B98004FFF6C /* LSAnimationButton.m */; };
+		65A64FA31DDF1B98004FFF6C /* LSBorderAnimationCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64FA11DDF1B98004FFF6C /* LSBorderAnimationCircleView.m */; };
+		65A64FA51DDF2D5E004FFF6C /* BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 65A64FA41DDF2D5E004FFF6C /* BG.jpg */; };
+		65A64FAC1DDF3249004FFF6C /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65A64FA71DDF3249004FFF6C /* MBProgressHUD.bundle */; };
+		65A64FAD1DDF3249004FFF6C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64FA91DDF3249004FFF6C /* MBProgressHUD.m */; };
+		65A64FAE1DDF3249004FFF6C /* MBProgressHUD+HM.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A64FAB1DDF3249004FFF6C /* MBProgressHUD+HM.m */; };
 		65E62D951DC08DE800312F18 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62D941DC08DE800312F18 /* main.m */; };
 		65E62D981DC08DE800312F18 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62D971DC08DE800312F18 /* AppDelegate.m */; };
 		65E62D9B1DC08DE800312F18 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E62D9A1DC08DE800312F18 /* ViewController.m */; };
@@ -37,6 +43,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65A64F9E1DDF1B98004FFF6C /* LSAnimationButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSAnimationButton.h; path = DSGBLEManager/LSAnimationButton/LSAnimationButton.h; sourceTree = "<group>"; };
+		65A64F9F1DDF1B98004FFF6C /* LSAnimationButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSAnimationButton.m; path = DSGBLEManager/LSAnimationButton/LSAnimationButton.m; sourceTree = "<group>"; };
+		65A64FA01DDF1B98004FFF6C /* LSBorderAnimationCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LSBorderAnimationCircleView.h; path = DSGBLEManager/LSAnimationButton/LSBorderAnimationCircleView.h; sourceTree = "<group>"; };
+		65A64FA11DDF1B98004FFF6C /* LSBorderAnimationCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LSBorderAnimationCircleView.m; path = DSGBLEManager/LSAnimationButton/LSBorderAnimationCircleView.m; sourceTree = "<group>"; };
+		65A64FA41DDF2D5E004FFF6C /* BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BG.jpg; sourceTree = "<group>"; };
+		65A64FA71DDF3249004FFF6C /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MBProgressHUD.bundle; path = MBProgressHUD/MBProgressHUD.bundle; sourceTree = "<group>"; };
+		65A64FA81DDF3249004FFF6C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = MBProgressHUD/MBProgressHUD.h; sourceTree = "<group>"; };
+		65A64FA91DDF3249004FFF6C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = MBProgressHUD/MBProgressHUD.m; sourceTree = "<group>"; };
+		65A64FAA1DDF3249004FFF6C /* MBProgressHUD+HM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MBProgressHUD+HM.h"; path = "MBProgressHUD/MBProgressHUD+HM.h"; sourceTree = "<group>"; };
+		65A64FAB1DDF3249004FFF6C /* MBProgressHUD+HM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MBProgressHUD+HM.m"; path = "MBProgressHUD/MBProgressHUD+HM.m"; sourceTree = "<group>"; };
 		65E62D901DC08DE800312F18 /* DSGBLEManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSGBLEManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E62D941DC08DE800312F18 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65E62D961DC08DE800312F18 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,9 +101,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65A64F9B1DDF1B6A004FFF6C /* LSAnimationButton */ = {
+			isa = PBXGroup;
+			children = (
+				65A64F9E1DDF1B98004FFF6C /* LSAnimationButton.h */,
+				65A64F9F1DDF1B98004FFF6C /* LSAnimationButton.m */,
+				65A64FA01DDF1B98004FFF6C /* LSBorderAnimationCircleView.h */,
+				65A64FA11DDF1B98004FFF6C /* LSBorderAnimationCircleView.m */,
+			);
+			name = LSAnimationButton;
+			sourceTree = "<group>";
+		};
+		65A64FA61DDF323A004FFF6C /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				65A64FA71DDF3249004FFF6C /* MBProgressHUD.bundle */,
+				65A64FA81DDF3249004FFF6C /* MBProgressHUD.h */,
+				65A64FA91DDF3249004FFF6C /* MBProgressHUD.m */,
+				65A64FAA1DDF3249004FFF6C /* MBProgressHUD+HM.h */,
+				65A64FAB1DDF3249004FFF6C /* MBProgressHUD+HM.m */,
+			);
+			name = HUD;
+			sourceTree = "<group>";
+		};
 		65E62D871DC08DE800312F18 = {
 			isa = PBXGroup;
 			children = (
+				65A64FA61DDF323A004FFF6C /* HUD */,
+				65A64F9B1DDF1B6A004FFF6C /* LSAnimationButton */,
 				65E62DC61DC0921700312F18 /* LSBLEManager */,
 				65E62D921DC08DE800312F18 /* DSGBLEManager */,
 				65E62DAC1DC08DE900312F18 /* DSGBLEManagerTests */,
@@ -121,6 +162,7 @@
 		65E62D931DC08DE800312F18 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65A64FA41DDF2D5E004FFF6C /* BG.jpg */,
 				65E62D9C1DC08DE900312F18 /* Main.storyboard */,
 				65E62D9F1DC08DE900312F18 /* Assets.xcassets */,
 				65E62DA11DC08DE900312F18 /* LaunchScreen.storyboard */,
@@ -268,6 +310,8 @@
 			files = (
 				65E62DA31DC08DE900312F18 /* LaunchScreen.storyboard in Resources */,
 				65E62DA01DC08DE900312F18 /* Assets.xcassets in Resources */,
+				65A64FAC1DDF3249004FFF6C /* MBProgressHUD.bundle in Resources */,
+				65A64FA51DDF2D5E004FFF6C /* BG.jpg in Resources */,
 				65E62D9E1DC08DE900312F18 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,8 +340,12 @@
 				65E62D9B1DC08DE800312F18 /* ViewController.m in Sources */,
 				65E62D981DC08DE800312F18 /* AppDelegate.m in Sources */,
 				65E62D951DC08DE800312F18 /* main.m in Sources */,
+				65A64FA21DDF1B98004FFF6C /* LSAnimationButton.m in Sources */,
 				65E62DCC1DC0923D00312F18 /* BLE.m in Sources */,
+				65A64FA31DDF1B98004FFF6C /* LSBorderAnimationCircleView.m in Sources */,
 				65E62DCD1DC0923D00312F18 /* LSBLEManager.m in Sources */,
+				65A64FAE1DDF3249004FFF6C /* MBProgressHUD+HM.m in Sources */,
+				65A64FAD1DDF3249004FFF6C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
